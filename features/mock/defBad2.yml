@@ -1,0 +1,8 @@
+A:
+  desc: Item A
+  def: DefA
+B:
+  desc: Item B
+  def: DefB
+C:
+  def: DefC
