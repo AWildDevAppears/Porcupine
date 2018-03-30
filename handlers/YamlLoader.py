@@ -33,9 +33,9 @@ class YamlLoader:
                 if 'desc' not in data[k]:
                     errors.append('Cannot load definitions, description not found for {}'.format(k))
                 if 'def' not in data[k]:
-                    errors.append('Cannot load definitions, handlers not found for {}'.format(k))
+                    errors.append('Cannot load definitions, model not found for {}'.format(k))
                 if 'desc' in data[k] and not Path('{}/handlers/{}.yml'.format(path, data[k]['desc'])).is_file():
-                    errors.append('Cannot load definitions, missing handlers file for {}'.format(k))
+                    errors.append('Cannot load definitions, missing model file for {}'.format(k))
 
         for err in errors:
             print(err)
