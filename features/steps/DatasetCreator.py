@@ -9,6 +9,7 @@ def step_impl(context):
         'input_type': context.table[0],
     }
 
+
 @when('I enter "{value}"')
 def step_impl(context, value):
     context.res['value'] = value
@@ -17,6 +18,7 @@ def step_impl(context, value):
 @then('The form should save')
 def step_impl(context):
     assert FormHandler.verify_input_valid(**context.res) is True
+
 
 @then('The form should not save')
 def step_impl(context):

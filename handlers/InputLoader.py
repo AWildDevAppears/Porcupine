@@ -20,7 +20,7 @@ class InputLoader:
                 'modifier': re.match('radio<(.*)>', ref).group(1),
                 'optional': 'True' if ref[-1] == '?' else 'False',
                 'reference': '',
-                'multiple': '',
+                'multiple': 'False',
             }
 
         # Handling optional types

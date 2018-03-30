@@ -19,3 +19,4 @@ def step_impl(context):
         assert output['modifier'] == row['modifier']
         assert output['optional'] == row['optional']
         assert output['reference'] == row['reference']
+        assert output['multiple'] == row['multiple']
