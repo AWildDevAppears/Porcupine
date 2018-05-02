@@ -1,5 +1,9 @@
+
+from views.Application import Application
+
 def main():
-    pass
+    app = Application()
+    app.mainloop()
 
 
 if __name__ == '__main__':

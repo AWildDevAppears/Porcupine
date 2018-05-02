@@ -32,6 +32,10 @@ class InputLoader:
         if ref[0] == '~':
             reference = ref[1:]
             field = 'reference'
+        # Handling preset types
+        elif ref[0] == '$':
+            field = 'type'
+            reference = ref[1:]
         # Handling primitive types
         else:
             field = InputLoader.get_field_for(ref)

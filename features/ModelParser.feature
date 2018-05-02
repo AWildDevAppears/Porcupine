@@ -40,6 +40,18 @@ Feature: Model Parser
       | field     | modifier      | optional  | reference | multiple |
       | reference |               | False     | A         | False    |
 
+  Scenario: Input - typeA reference
+    Given I have an input type of "$A"
+    Then it should evaluate to
+      | field     | modifier      | optional  | reference | multiple |
+      | type      |               | False     | A         | False    |
+
+  Scenario: Input - typeA reference
+    Given I have an input type of "$A?"
+    Then it should evaluate to
+      | field     | modifier      | optional  | reference | multiple |
+      | type      |               | True      | A         | False    |
+
   Scenario: Input - defA reference optional
     Given I have an input type of "~A?"
     Then it should evaluate to

@@ -1,0 +1,11 @@
+Dog:
+  desc: Furry mammals that exist in the world
+  def: DefDog
+
+Owner:
+  desc: Owner of an Animal
+  def: DefOwner
+
+Cat:
+  desc: The other kind of furry mammal in this scenario
+  def: DefCat

@@ -30,3 +30,18 @@ Feature: Dataset Creator
       | numerical   |           | False    |           | False    |
     When I enter "12.5"
     Then the form should not save
+
+  Scenario: Reference input - enter valid key
+    Given I have an input of type
+      | field     | modifier      | optional  | reference | multiple |
+      | reference |               | False     | A         | False    |
+    When I enter "AAAAAA"
+    Then the form should save
+
+  Scenario: Reference input - enter invalid key
+    Given I have an input of type
+      | field     | modifier      | optional  | reference | multiple |
+      | reference |               | False     | A         | False    |
+    When I enter "BBBBBBB"
+    Then the form should not save
+

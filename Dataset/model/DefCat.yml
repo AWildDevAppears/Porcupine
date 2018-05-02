@@ -1,0 +1,3 @@
+_extends: Animal
+color: radio<red, green, blue>
+fur: $FurTypes

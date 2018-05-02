@@ -17,9 +17,15 @@ def step_impl(context, value):
 
 @then('The form should save')
 def step_impl(context):
+    if context.res['input_type']['field'] == 'reference':
+        assert FormHandler.verify_reference_exists('./features/mock/DefA.json', context.res['value']) is True
+        return
     assert FormHandler.verify_input_valid(**context.res) is True
 
 
 @then('The form should not save')
 def step_impl(context):
+    if context.res['input_type']['field'] == 'reference':
+        assert FormHandler.verify_reference_exists('./features/mock/DefA.json', context.res['value']) is False
+        return
     assert FormHandler.verify_input_valid(**context.res) is False
